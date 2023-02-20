@@ -1,5 +1,6 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { PasswordStrength } from 'src/app/enums/PasswordStrength';
 
 @Component({
   selector: 'password-color-checker',
@@ -16,6 +17,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class PasswordColorCheckerComponent implements ControlValueAccessor {
   passwordStrength = '';
   value = '';
+
+  passwordStrengthEnum = PasswordStrength;
 
   onChange: (value: string) => void = () => {};
   onTouched: () => void = () => {};

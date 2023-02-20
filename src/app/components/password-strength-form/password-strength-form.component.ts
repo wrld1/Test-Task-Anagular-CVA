@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'password-strength-form',
@@ -14,11 +9,7 @@ import {
 export class PasswordStrengthForm implements OnInit {
   public form!: FormGroup;
 
-  get passwordField(): FormControl {
-    return this.form.get('password') as FormControl;
-  }
-
-  constructor(private fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.generateForm();
